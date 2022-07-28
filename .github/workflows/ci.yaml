@@ -61,7 +61,7 @@ jobs:
         id: new_release
         run: |
           nextRelease="`npx semantic-release@^17.0.0 --dryRun | grep -oP 'Published release \K.*? ' || true`"
-          npx semantic-release@^17.0.0
+          npx semantic-release@^17.0.0 --branches main
           echo "::set-output name=tag::$nextRelease"
 
         env:
