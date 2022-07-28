@@ -173,6 +173,9 @@ with vtkjs_container:
           subscribe=st.session_state.subscribe_toggle,
           clear=st.session_state.clear_toggle,
           action_stack=st.session_state.action_stack,
+          style={
+            'height': '640px'
+          }
         )
 
 # action_stack is cleared after it's passed to the viewer
